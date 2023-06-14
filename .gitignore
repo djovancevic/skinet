@@ -479,3 +479,6 @@ $RECYCLE.BIN/
 .idea
 *.db-shm
 *.db-wal
+
+# localhost ssl keys
+.pem
