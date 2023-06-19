@@ -30,11 +30,11 @@ export class CheckoutPaymentComponent implements OnInit {
   cardErrors: any;
   loading = false;
 
-  constructor(private basketService: BasketService, private checkoutService: CheckoutService, 
+  constructor(private basketService: BasketService, private checkoutService: CheckoutService,
       private toastr: ToastrService, private router: Router) {}
 
   ngOnInit(): void {
-    loadStripe('pk_test_2PZ84pFKu2MddUgGDG521v9m00SlLWySIR').then(stripe => {
+    loadStripe('pk_test_51NJ9z1GgIDw1AHHQpADBwgDomNiaGvrhHJik6IwK6FUbhKMOy7YE5HBgoCDQ7qUkVtTYibqHXMOFPgTcdQRlGZma0093K1uHH4').then(stripe => {
       this.stripe = stripe;
       const elements = stripe?.elements();
       if (elements) {
@@ -66,9 +66,9 @@ export class CheckoutPaymentComponent implements OnInit {
   }
 
   get paymentFormComplete() {
-    return this.checkoutForm?.get('paymentForm')?.valid 
-      && this.cardNumberComplete 
-      && this.cardExpiryComplete 
+    return this.checkoutForm?.get('paymentForm')?.valid
+      && this.cardNumberComplete
+      && this.cardExpiryComplete
       && this.cardCvcComplete
   }
 
