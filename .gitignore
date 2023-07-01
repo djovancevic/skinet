@@ -479,3 +479,7 @@ $RECYCLE.BIN/
 .idea
 *.db-shm
 *.db-wal
+
+# exclude publish folder
+publish/
+
